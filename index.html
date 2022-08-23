@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <!-- Criando o nosso display da calculadora -->
+    <div class="calc-borda">
+    <p id="display"></p>
+
+    <!-- Criando os botões de interação da calculadora -->
+    <div class="calculadora">
+        <div class="teclas-calculadora">
+          <button type="button" class="operador" value="%" onclick="inserir('%')">&percnt;</button>
+          <button type="button" class="operador" value="C" onclick="limpar()">C</button>
+          <button type="button" class="operador" onclick="backspace()" value="=>">&DoubleLeftArrow;</button>
+          <button type="button" class="operador" value="/" onclick="inserir('/')">&divide;</button>
+      
+          <button type="button" value="7" onclick="inserir('7')">7</button>
+          <button type="button" value="8" onclick="inserir('8')">8</button>
+          <button type="button" value="9" onclick="inserir('9')">9</button>
+          <button type="button" value="x"  class="operador" onclick="inserir('*')">&times;</button>
+            
+      
+          <button type="button" value="4" onclick="inserir('4')">4</button>
+          <button type="button" value="5" onclick="inserir('5')">5</button>
+          <button type="button" value="6" onclick="inserir('6')">6</button>
+          <button type="button" value="-"  class="operador" onclick="inserir('-')">-</button>
+      
+          <button type="button" value="1" onclick="inserir('1')">1</button>
+          <button type="button" value="2" onclick="inserir('2')">2</button>
+          <button type="button" value="3" onclick="inserir('3')">3</button>
+          <button type="button" value="+" class="operador" onclick="inserir('+')">+</button>
+      
+          <button type="button" value="0" onclick="inserir('0')">0</button>
+          <button type="button" class="decimal" value="."  onclick="inserir('.')">.</button>
+          <button type="button" class="igual" onclick="igual()" value="=">=</button>
+          <button type="button" class="w3-button w3-light-gray w3-hover-light-gray" onclick="historico()" value="@">&#128269</button>
+        
+        </div>
+    </div>
+</div>
+
+<!-- MODAL -->
+<div id="id01" class="w3-modal w3-animate-opacity ">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+      <header class="w3-container w3-blue"> 
+        <span onclick="sairModal()" 
+        class="w3-button w3-large w3-display-topright">&times;</span>
+        <h2>Histórico</h2>
+      </header>
+      <div class="w3-container">
+        <p id="histModal"></p>
+       
+      </div>
+    </div>
+  </div>
+  
+<script src="script.js"></script>
+</body>
+</html>
